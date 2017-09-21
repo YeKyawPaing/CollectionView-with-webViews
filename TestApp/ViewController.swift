@@ -56,6 +56,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         {
             self.deleteBtn.alpha = 0.5
             self.deleteBtn.isUserInteractionEnabled = false
+            
             self.emptyState.frame = CGRect(x: 0, y: 74, width: self.view.frame.width, height: self.view.frame.height)
             self.view.addSubview(self.emptyState)
             self.emptyState.superview?.bringSubview(toFront: self.emptyState)
@@ -66,9 +67,11 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
+        
         let localfilePath = Bundle.main.url(forResource: "randomGenerator", withExtension: "html");
         let myRequest = URLRequest(url: localfilePath!);
         cell.webView.loadRequest(myRequest);
+        
         return cell
     }
     
@@ -84,12 +87,15 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
             
             let autoScrollString = getCurrentOffset()
             let autoScrollInteger = (autoScrollString as NSString).integerValue
+            
             let toScroll = IndexPath(row: autoScrollInteger, section: 0)
             self.collectionView.scrollToItem(at: toScroll, at: .centeredHorizontally, animated: true)
+            
             if(autoScrollInteger != 0)
             {
                 self.prevBtn.alpha = 1
                 self.prevBtn.isUserInteractionEnabled = true
+                
                 if(autoScrollInteger < self.indexArray.count - 1)
                 {
                     self.nextBtn.alpha = 1
@@ -104,6 +110,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
             {
                 self.prevBtn.alpha = 0.3
                 self.prevBtn.isUserInteractionEnabled = false
+                
                 self.nextBtn.alpha = 1
                 self.nextBtn.isUserInteractionEnabled = true
             }
@@ -116,9 +123,10 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         {
             let deleteString = getCurrentOffset()
             let deleteInteger = (deleteString as NSString).integerValue
+            
             modifiedIndexPath = deleteInteger
             indexArray.removeObject(at: modifiedIndexPath)
-            print("indexArray deleted = \(indexArray)")
+            
             if(deleteInteger == 0)
             {
                 self.prevBtn.alpha = 0.3
@@ -134,6 +142,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
             {
                 self.prevBtn.alpha = 0.3
                 self.prevBtn.isUserInteractionEnabled = false
+                
                 self.nextBtn.alpha = 0.3
                 self.nextBtn.isUserInteractionEnabled = false
             }
@@ -143,25 +152,29 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     }
     
     @IBAction func addPressed(_ sender: Any) {
+        //To add button delay time
         self.addBtn.isEnabled = false
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ViewController.enableButton), userInfo: nil, repeats: false)
+        
         if(indexArray.count == 0)
         {
             self.deleteBtn.alpha = 1
             self.deleteBtn.isUserInteractionEnabled = true
+            
             indexArray.add(0)
-            print("indexArray added = \(indexArray)")
             self.emptyState.removeFromSuperview()
         }
         else
         {
             self.prevBtn.alpha = 1
             self.prevBtn.isUserInteractionEnabled = true
+            
             let addString = getCurrentOffset()
             let addInteger = (addString as NSString).integerValue + 1
             indexArray.add(addInteger)
-            print("indexArray added = \(indexArray)")
+            
             self.collectionView.reloadData()
+            
             let toScroll = IndexPath(row: addInteger, section: 0)
             self.collectionView.scrollToItem(at: toScroll, at: .centeredHorizontally, animated: true)
         }
@@ -171,18 +184,23 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     @IBAction func nextPressed(_ sender: Any) {
         self.prevBtn.alpha = 1
         self.prevBtn.isUserInteractionEnabled = true
+        
         let nextBtnString = getCurrentOffset()
         var nextBtnInteger = (nextBtnString as NSString).integerValue
+        
         if(nextBtnInteger < self.indexArray.count - 1)
         {
             nextBtnInteger += 1
+            
             self.nextBtn.alpha = 1
             self.nextBtn.isUserInteractionEnabled = true
+            
             if(nextBtnInteger == self.indexArray.count - 1)
             {
                 self.nextBtn.alpha = 0.3
                 self.nextBtn.isUserInteractionEnabled = false
             }
+            
             let toScroll = IndexPath(row: nextBtnInteger, section: 0)
             self.collectionView.scrollToItem(at: toScroll, at: .centeredHorizontally, animated: true)
         }
@@ -191,17 +209,21 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     @IBAction func previousPressed(_ sender: Any) {
         self.nextBtn.alpha = 1
         self.nextBtn.isUserInteractionEnabled = true
+        
         let prevBtnString = getCurrentOffset()
         var prevBtnInteger = (prevBtnString as NSString).integerValue
+        
         if(prevBtnInteger != 0){
             prevBtnInteger -= 1
             self.prevBtn.alpha = 1
             self.prevBtn.isUserInteractionEnabled = true
+            
             if(prevBtnInteger == 0)
             {
                 self.prevBtn.alpha = 0.3
                 self.prevBtn.isUserInteractionEnabled = false
             }
+            
             let toScroll = IndexPath(row: prevBtnInteger, section: 0)
             self.collectionView.scrollToItem(at: toScroll, at: .centeredHorizontally, animated: true)
         }
@@ -213,6 +235,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         var finalString = ""
         var currentCellOffset = self.collectionView.contentOffset
         currentCellOffset.x += self.collectionView.frame.width / 2
+        
         if let indexPath = self.collectionView.indexPathForItem(at: currentCellOffset) {
             let toString = "\(indexPath)"
             let range = toString.range(of: "(?<=,)[^.]+(?=])", options:.regularExpression)
