@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            p {
+                position: absolute;
+                top: 38%;
+                left: 48%;
+                font-size: 60px;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <p id="random_generator"></p>
+    
+        <script>
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF'.split('');
+                var color = '#';
+                for (var i = 0; i < 6; i++ )
+                    color += letters[Math.floor(Math.random() * 15)];
+                    return color;
+            }
+    
+            function getRandomCharacter() {
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        
+                for (var i = 0; i < 1; i++)
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+                    return text;
+            }
+    
+            document.getElementById("random_generator").innerHTML = getRandomCharacter();
+            document.getElementById("random_generator").style.color = getRandomColor();
+            document.getElementsByTagName('body')[0].style.background = getRandomColor();
+        </script>
+        
+    </body>
+</html>

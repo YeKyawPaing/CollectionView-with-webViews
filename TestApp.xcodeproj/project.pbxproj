@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		452B93A11F72485100708651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B93A01F72485100708651 /* AppDelegate.swift */; };
-		452B93A31F72485100708651 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B93A21F72485100708651 /* ViewController.swift */; };
-		452B93A61F72485100708651 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452B93A41F72485100708651 /* Main.storyboard */; };
 		452B93A81F72485100708651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452B93A71F72485100708651 /* Assets.xcassets */; };
 		452B93AB1F72485100708651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452B93A91F72485100708651 /* LaunchScreen.storyboard */; };
 		452B93B61F72485100708651 /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B93B51F72485100708651 /* TestAppTests.swift */; };
 		452B93C11F72485100708651 /* TestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B93C01F72485100708651 /* TestAppUITests.swift */; };
+		452B93DA1F725E4500708651 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B93D81F725E4500708651 /* ViewController.swift */; };
+		452B93DB1F725E4500708651 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452B93D91F725E4500708651 /* ViewController.xib */; };
+		452B93DE1F72678900708651 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B93DC1F72678900708651 /* CustomCollectionViewCell.swift */; };
+		452B93DF1F72678900708651 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452B93DD1F72678900708651 /* CustomCollectionViewCell.xib */; };
+		452CF6701F729CCC003A8033 /* randomGenerator.html in Resources */ = {isa = PBXBuildFile; fileRef = 452CF66F1F729CCC003A8033 /* randomGenerator.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +39,6 @@
 /* Begin PBXFileReference section */
 		452B939D1F72485100708651 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452B93A01F72485100708651 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		452B93A21F72485100708651 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		452B93A51F72485100708651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		452B93A71F72485100708651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		452B93AA1F72485100708651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		452B93AC1F72485100708651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,11 @@
 		452B93BC1F72485100708651 /* TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		452B93C01F72485100708651 /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
 		452B93C21F72485100708651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452B93D81F725E4500708651 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		452B93D91F725E4500708651 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		452B93DC1F72678900708651 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		452B93DD1F72678900708651 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		452CF66F1F729CCC003A8033 /* randomGenerator.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = randomGenerator.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				452B93A01F72485100708651 /* AppDelegate.swift */,
-				452B93A21F72485100708651 /* ViewController.swift */,
-				452B93A41F72485100708651 /* Main.storyboard */,
 				452B93A71F72485100708651 /* Assets.xcassets */,
 				452B93A91F72485100708651 /* LaunchScreen.storyboard */,
 				452B93AC1F72485100708651 /* Info.plist */,
+				452B93D81F725E4500708651 /* ViewController.swift */,
+				452B93D91F725E4500708651 /* ViewController.xib */,
+				452B93DC1F72678900708651 /* CustomCollectionViewCell.swift */,
+				452B93DD1F72678900708651 /* CustomCollectionViewCell.xib */,
+				452CF66F1F729CCC003A8033 /* randomGenerator.html */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 				TargetAttributes = {
 					452B939C1F72485100708651 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9DS29C9J7A;
 						ProvisioningStyle = Automatic;
 					};
 					452B93B01F72485100708651 = {
@@ -233,8 +243,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				452B93AB1F72485100708651 /* LaunchScreen.storyboard in Resources */,
+				452B93DB1F725E4500708651 /* ViewController.xib in Resources */,
+				452B93DF1F72678900708651 /* CustomCollectionViewCell.xib in Resources */,
+				452CF6701F729CCC003A8033 /* randomGenerator.html in Resources */,
 				452B93A81F72485100708651 /* Assets.xcassets in Resources */,
-				452B93A61F72485100708651 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				452B93A31F72485100708651 /* ViewController.swift in Sources */,
+				452B93DA1F725E4500708651 /* ViewController.swift in Sources */,
 				452B93A11F72485100708651 /* AppDelegate.swift in Sources */,
+				452B93DE1F72678900708651 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		452B93A41F72485100708651 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				452B93A51F72485100708651 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		452B93A91F72485100708651 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9DS29C9J7A;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sg.edu.nus.iss.wlad.TestApp;
@@ -424,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9DS29C9J7A;
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sg.edu.nus.iss.wlad.TestApp;
@@ -505,6 +512,7 @@
 				452B93C71F72485100708651 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		452B93C81F72485100708651 /* Build configuration list for PBXNativeTarget "TestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +521,7 @@
 				452B93CA1F72485100708651 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		452B93CB1F72485100708651 /* Build configuration list for PBXNativeTarget "TestAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +530,7 @@
 				452B93CD1F72485100708651 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
