@@ -20,7 +20,6 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     var modifiedIndexPath : Int = 0
     var indexArray : NSMutableArray = [0,1,2]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
