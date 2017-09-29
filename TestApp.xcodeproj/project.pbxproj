@@ -17,6 +17,8 @@
 		452B93DE1F72678900708651 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B93DC1F72678900708651 /* CustomCollectionViewCell.swift */; };
 		452B93DF1F72678900708651 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452B93DD1F72678900708651 /* CustomCollectionViewCell.xib */; };
 		452CF6701F729CCC003A8033 /* randomGenerator.html in Resources */ = {isa = PBXBuildFile; fileRef = 452CF66F1F729CCC003A8033 /* randomGenerator.html */; };
+		45832E1C1F7E284B00D9A09D /* TouchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45832E1A1F7E284B00D9A09D /* TouchIDViewController.swift */; };
+		45832E1D1F7E284B00D9A09D /* TouchIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45832E1B1F7E284B00D9A09D /* TouchIDViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		452B93DC1F72678900708651 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		452B93DD1F72678900708651 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		452CF66F1F729CCC003A8033 /* randomGenerator.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = randomGenerator.html; sourceTree = "<group>"; };
+		45832E1A1F7E284B00D9A09D /* TouchIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDViewController.swift; sourceTree = "<group>"; };
+		45832E1B1F7E284B00D9A09D /* TouchIDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchIDViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				452B93DC1F72678900708651 /* CustomCollectionViewCell.swift */,
 				452B93DD1F72678900708651 /* CustomCollectionViewCell.xib */,
 				452CF66F1F729CCC003A8033 /* randomGenerator.html */,
+				45832E1A1F7E284B00D9A09D /* TouchIDViewController.swift */,
+				45832E1B1F7E284B00D9A09D /* TouchIDViewController.xib */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 				452B93AB1F72485100708651 /* LaunchScreen.storyboard in Resources */,
 				452B93DB1F725E4500708651 /* ViewController.xib in Resources */,
 				452B93DF1F72678900708651 /* CustomCollectionViewCell.xib in Resources */,
+				45832E1D1F7E284B00D9A09D /* TouchIDViewController.xib in Resources */,
 				452CF6701F729CCC003A8033 /* randomGenerator.html in Resources */,
 				452B93A81F72485100708651 /* Assets.xcassets in Resources */,
 			);
@@ -272,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				452B93DA1F725E4500708651 /* ViewController.swift in Sources */,
+				45832E1C1F7E284B00D9A09D /* TouchIDViewController.swift in Sources */,
 				452B93A11F72485100708651 /* AppDelegate.swift in Sources */,
 				452B93DE1F72678900708651 /* CustomCollectionViewCell.swift in Sources */,
 			);
